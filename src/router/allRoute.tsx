@@ -5,6 +5,8 @@ import About from "../views/About";
 import Resume from "../views/Resume";
 import Portfolio from "../views/Portfolio";
 import Blog from "../views/Blog";
+import Contact from "../views/Contact";
+import NotFound from "../views/NotFound";
 
 const AllRoute = () => {
   return (
@@ -15,6 +17,8 @@ const AllRoute = () => {
         <Route path="/resume" element={<Resume />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -1,7 +1,8 @@
 import React from "react";
+import ResumeComponent from "../components/Resume/ResumeComponent";
 
 const Resume = () => {
-  return <div>Resume</div>;
+  return <ResumeComponent />;
 };
 
 export default Resume;
