@@ -24,7 +24,7 @@ const AboutComponent = () => {
 
         <div className=" mt-20 lg:mt-32 text-white dark:text-dark">
           <span className="text-base text-gray-500 ">Get to know me</span>
-          <h2 className=" text-6xl text-white font-semibold dark:text-black">
+          <h2 className=" text-3xl lg:text-4xl  text-white font-semibold dark:text-black">
             My Services
           </h2>
         </div>
@@ -34,7 +34,7 @@ const AboutComponent = () => {
           <span className="text-base text-gray-500 ">
             Get to know my clients
           </span>
-          <h2 className=" text-6xl text-white font-semibold dark:text-black">
+          <h2 className="text-3xl text-white font-semibold lg:text-4xl">
             My Testimonials
           </h2>
         </div>

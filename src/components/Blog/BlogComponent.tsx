@@ -1,11 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import BlogCard from "./BlogCard";
-import Modal from "react-modal";
 import Navbar from "../Hero/Navbar";
 import { portfolioData } from "../../utils/data";
-
-Modal.setAppElement("#root");
 
 const BlogComponent = () => {
   const [blogData, setBlogData] = useState(portfolioData.BlogTaxonomy);

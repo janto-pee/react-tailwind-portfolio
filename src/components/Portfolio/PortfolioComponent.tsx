@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import Modal from "react-modal";
 import PortfolioTab from "./PortfolioTab";
 import Navbar from "../Hero/Navbar";
 
@@ -8,7 +7,6 @@ const PortfolioComponent = () => {
   return (
     <div className="bg-primary-900 min-h-screen">
       <Navbar />
-
       <div className="h-full bg-[rgb(16,16,16)] text-white">
         <div className="w-full max-w-6xl mx-auto px-5 lg:px-4 ">
           <div className="text-center mt-6 text-white dark:text-white">

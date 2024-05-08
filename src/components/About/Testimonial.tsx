@@ -2,14 +2,20 @@ import React from "react";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaQuoteLeft } from "react-icons/fa";
 import { portfolioData } from "../../utils/data";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 py-10 lg:py-20 gap-8 ">
+      {/* animate={{ opacity: 1 }} */}
       {portfolioData.testimonial.map((item) => (
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          exit={{ opacity: 0 }}
           key={item.item}
-          className="col-span-1 p-8 bg-[rgb(22,22,22)] shadow-black "
+          className="col-span-1 p-8 bg-[rgb(22,22,22)] shadow-black"
         >
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-4">
@@ -23,7 +29,7 @@ const Testimonials = () => {
           </div>
           <h2 className="text-xl mt-8 mb-3 text-primary-100">{item.title}</h2>
           <p className="text-primary-400">{item.comment}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
