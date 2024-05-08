@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import Navbar from "../Hero/Navbar";
 import Resume from "./Resume";
+import Skills from "./Skills";
 
 const ResumeComponent = () => {
   return (
@@ -21,7 +22,7 @@ const ResumeComponent = () => {
           </span>
           <h2 className=" text-6xl text-white font-semibold ">My Skills</h2>
         </div>
-        {/* <Skills /> */}
+        <Skills />
       </div>
     </div>
   );

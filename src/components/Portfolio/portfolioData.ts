@@ -11,25 +11,25 @@ import Image9 from "../../assets/img/portfolio/project-9.jpg";
 const PortfolioData = [
   {
     id: 1,
-    type: "mockup project",
+    type: "Frontend",
     image: Image1,
-    tag: ["mockup"],
+    tag: ["frontend"],
     delayAnimation: "0",
     modalDetails: [
       {
         project: "Website",
         client: "Envato",
         language: "HTML, CSS, Javascript",
-        preview: "www.envato.com",
-        link: "https://www.envato.com/",
+        preview: "https://github.com/janto-pee?tab=repositories",
+        link: "https://github.com/janto-pee?tab=repositories",
       },
     ],
   },
   {
     id: 2,
-    type: "youtube project",
+    type: "Backend project",
     image: Image2,
-    tag: ["video"],
+    tag: ["backend"],
     delayAnimation: "100",
     modalDetails: [
       {
@@ -43,25 +43,25 @@ const PortfolioData = [
   },
   {
     id: 3,
-    type: "slider project",
+    type: "Cloud project",
     image: Image3,
-    tag: [],
+    tag: ["cloud"],
     delayAnimation: "200",
     modalDetails: [
       {
         project: "Website",
         client: "Themeforest",
         language: " HTML, CSS, Javascript",
-        preview: "www.envato.com",
-        link: "https://www.envato.com",
+        preview: "https://github.com/janto-pee?tab=repositories",
+        link: "https://github.com/janto-pee?tab=repositories",
       },
     ],
   },
   {
     id: 4,
-    type: "local project",
+    type: "CICD project",
     image: Image4,
-    tag: ["logo", "video"],
+    tag: ["cicd", "frontend"],
     delayAnimation: "0",
     modalDetails: [
       {
@@ -75,25 +75,25 @@ const PortfolioData = [
   },
   {
     id: 5,
-    type: "saas project",
+    type: "containerization project",
     image: Image5,
-    tag: ["logo"],
+    tag: ["containerization", "frontend", "backend"],
     delayAnimation: "100",
     modalDetails: [
       {
         project: "Web Application",
         client: "Themeforest",
         language: "HTML, CSS, ReactJS",
-        preview: "www.envato.com",
-        link: "https://themeforest.net/item/deski-saas-software-react-template/33799794",
+        preview: "https://github.com/janto-pee?tab=repositories",
+        link: "https://github.com/janto-pee?tab=repositories",
       },
     ],
   },
   {
     id: 6,
-    type: "mockup project",
+    type: "operating system",
     image: Image6,
-    tag: ["logo", "mockup"],
+    tag: ["os", "cloud"],
     delayAnimation: "200",
     modalDetails: [
       {
@@ -107,9 +107,9 @@ const PortfolioData = [
   },
   {
     id: 7,
-    type: "facebook project",
+    type: "backend project",
     image: Image7,
-    tag: ["logo"],
+    tag: ["backend", "containerization"],
     delayAnimation: "0",
     modalDetails: [
       {
@@ -117,15 +117,15 @@ const PortfolioData = [
         client: "Facebook",
         language: "HTML, CSS, Javascript",
         preview: "www.facebook.com",
-        link: "https://www.facebook.com/ibthemes",
+        link: "https://github.com/janto-pee?tab=repositories",
       },
     ],
   },
   {
     id: 8,
-    type: "dribble project",
+    type: "cicd project",
     image: Image8,
-    tag: ["graphic design"],
+    tag: ["frontend", "cicd", "backend"],
     delayAnimation: "100",
     modalDetails: [
       {
@@ -133,23 +133,23 @@ const PortfolioData = [
         client: "Dribbble",
         language: "HTML, CSS, Javascript",
         preview: "www.dribbble.com",
-        link: "https://dribbble.com/ib-themes",
+        link: "https://github.com/janto-pee?tab=repositories",
       },
     ],
   },
   {
     id: 9,
-    type: "behence project",
+    type: "os project",
     image: Image9,
-    tag: ["graphic design", "mockup"],
+    tag: ["os", "cicd"],
     delayAnimation: "200",
     modalDetails: [
       {
         project: "Website",
         client: "Behance",
         language: "HTML, CSS, Javascript",
-        preview: "www.behance.com",
-        link: "https://www.behance.net/ib-themes",
+        preview: "https://github.com/janto-pee?tab=repositories",
+        link: "https://github.com/janto-pee?tab=repositories",
       },
     ],
   },

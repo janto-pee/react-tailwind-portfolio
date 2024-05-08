@@ -25,11 +25,11 @@ const AboutMe = () => {
         </h3>
 
         <small className="text-base text-primary-500 ">
-          I am a freelancer based in the United Kingdom and i have been building
-          noteworthy UX/UI designs and websites for years, which comply with the
-          latest design trends. I help convert a vision and an idea into
-          meaningful and useful products. Having a sharp eye for product
-          evolution helps me prioritize tasks, iterate fast and deliver faster.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+          inventore sunt, earum harum velit ab nobis eveniet hic omnis possimus
+          aliquid sint veritatis sapiente architecto? Voluptatum temporibus
+          eaque officiis quas pariatur, eveniet similique voluptas ipsam, autem
+          rem accusamus earum, tempore suscipit? Architecto nobis quos,
         </small>
         <div className="grid grid-cols-1 md:grid-cols-2 mt-6 pt-10 border-t gap-4 border-gray-700">
           {AboutComponentList.map((item, index) => (

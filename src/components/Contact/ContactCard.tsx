@@ -3,86 +3,121 @@ import { MdMarkEmailRead } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 import { FaFacebook, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa6";
-
-const ContactList = [
-  {
-    item: 1,
-    icon: <MdMarkEmailRead className=" text-secondary-600 text-3xl p-1" />,
-    title: "Email",
-    comment: "aayo.software@gmail.com",
-  },
-  {
-    item: 2,
-    icon: <FaLocationArrow className=" text-secondary-600 text-3xl p-1" />,
-    title: "Address",
-    comment: "Lagos State, Nigeria",
-  },
-  {
-    item: 3,
-    icon: <IoIosCall className=" text-secondary-600 text-3xl p-1" />,
-    title: "Phone",
-    comment: "+2349000000",
-  },
-  {
-    item: 4,
-    icon: <FaLinkedin className=" text-secondary-600 text-3xl p-1" />,
-    title: "Social",
-    comment: "@ayobami_adejumo...",
-  },
-];
+import { FormValues, validationSchema } from "../../utils/formValidation";
+import { portfolioData } from "../../utils/data";
+import { Field, Formik, FormikHelpers, FormikValues } from "formik";
 
 const ContactCard = () => {
-  // form handling
+  const initialValues: FormValues = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const handleSubmit = (
+    values: FormikValues,
+    { setSubmitting }: FormikHelpers<FormValues>
+  ) => {
+    setTimeout(() => {
+      console.log(values);
+      setSubmitting(false);
+    }, 500);
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 lg:py-20 gap-8 item-center">
       <div className="col-span-2 ">
-        <form action="" className="mt-4 space-y-4">
-          <div className="flex items-center gap-4">
-            <div className="w-full">
-              <label htmlFor="Name"></label>
-              <input
-                type="text"
-                className="p-4 rounded-3xl bg-primary-800 w-full"
-                placeholder="Your Name"
-              />
-            </div>
-            <div className="w-full">
-              <label htmlFor="email"></label>
-              <input
-                type="text"
-                className="p-4 rounded-3xl bg-primary-800 w-full"
-                placeholder="Your Email"
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="subject"></label>
-            <input
-              type="text"
-              className="p-4 rounded-3xl bg-primary-800 w-full"
-              placeholder="Your Subject"
-            />
-          </div>
-          <div>
-            <label htmlFor="message"></label>
-            <textarea
-              name="message"
-              id=""
-              cols={30}
-              rows={7}
-              className="px-4 py-2 rounded-3xl bg-primary-800 w-full"
-              placeholder="Your Message"
-            ></textarea>
-          </div>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({
+            isSubmitting,
+            values,
+            touched,
+            handleChange,
+            handleBlur,
+            errors,
+            handleSubmit,
+          }) => (
+            <form action="" onSubmit={handleSubmit} className="mt-4 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="w-full">
+                  <label className="text-red-500" htmlFor="Name">
+                    {errors.name && touched.name && errors.name}
+                  </label>
+                  <Field
+                    name="name"
+                    type="text"
+                    className="p-4 rounded-3xl bg-primary-800 w-full text-primary-200"
+                    placeholder="Your Name"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.name}
+                  />
+                </div>
 
-          <button className="px-6 py-2 text-gray-300 bg-secondary-600 rounded-3xl">
-            Send Message
-          </button>
-        </form>
+                <div className="w-full">
+                  <label className="text-red-500" htmlFor="email">
+                    {errors.email && touched.email && errors.email}
+                  </label>
+                  <Field
+                    name="email"
+                    type="text"
+                    className="p-4 rounded-3xl bg-primary-800 w-full text-primary-200"
+                    placeholder="Your Email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="text-red-500" htmlFor="subject">
+                  {errors.subject && touched.subject && errors.subject}
+                </label>
+                <Field
+                  name="subject"
+                  type="text"
+                  className="p-4 rounded-3xl bg-primary-800 w-full text-primary-200"
+                  placeholder="Your Subject"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.subject}
+                />
+              </div>
+              <div>
+                <label className="text-red-500" htmlFor="message">
+                  {errors.message && touched.message && errors.message}
+                </label>
+                <Field
+                  as="textarea"
+                  name="message"
+                  id=""
+                  cols={30}
+                  rows={7}
+                  className="px-4 py-2 rounded-3xl bg-primary-800 w-full text-primary-200"
+                  placeholder="Your Message"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.message}
+                ></Field>
+              </div>
+
+              <input
+                disabled={isSubmitting}
+                type="submit"
+                className="px-6 py-2 text-gray-300 bg-secondary-600 rounded-3xl"
+              />
+            </form>
+          )}
+        </Formik>
       </div>
       <div className="col-span-1 ">
         <div className="mt-4">
-          {ContactList.map(({ item, icon, title, comment }) => (
+          {portfolioData.contactList.map(({ item, icon, title, comment }) => (
             <div className="flex items-center gap-4 " key={item}>
               {icon}
               <div className="space-y-1 border-l border-gray-700 p-4">

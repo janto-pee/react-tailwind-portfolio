@@ -12,7 +12,10 @@ const About = [
 
 const Resume = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 py-10 lg:py-20 gap-8 ">
+    <div
+      className="grid grid-cols-1 md:grid-cols-2 py-10 lg:py-20 gap-8 "
+      data-aos="fade-up"
+    >
       {About.map((item) => (
         <div
           key={item.item}

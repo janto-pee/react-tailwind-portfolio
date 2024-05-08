@@ -3,14 +3,25 @@ import { AiOutlineClose } from "react-icons/ai";
 import BlogCard from "./BlogCard";
 import Modal from "react-modal";
 import Navbar from "../Hero/Navbar";
-
-const BlogComponentTaxonomy = {
-  blogsection: [{ image: "", title: "", description: "" }],
-};
+import { portfolioData } from "../../utils/data";
 
 Modal.setAppElement("#root");
 
 const BlogComponent = () => {
+  const [blogData, setBlogData] = useState(portfolioData.BlogTaxonomy);
+  const [isLoading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const blogData = async () => {
+      setLoading(true);
+      const response = await fetch("");
+      const data = await response.json();
+      setBlogData(data);
+    };
+    blogData();
+    setLoading(false);
+  }, []);
+
   return (
     <div className="bg-primary-900">
       <Navbar />
@@ -22,7 +33,7 @@ const BlogComponent = () => {
               My Blog
             </h2>
           </div>
-          <BlogCard />
+          <BlogCard blogData={portfolioData.BlogTaxonomy} />
         </div>
       </div>
     </div>
