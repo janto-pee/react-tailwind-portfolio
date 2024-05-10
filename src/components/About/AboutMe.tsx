@@ -1,6 +1,7 @@
 import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
+import aboutMeImage from "../../assets/img-1-b86c3682.png";
 
 const AboutComponentList = [
   { item: "Name", value: "Emma Smith" },
@@ -13,7 +14,7 @@ const AboutMe = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 text-white  mt-32 gap-10 items-center">
       <div className="col-span-1">
-        <img src="/src/assets/img-1-b86c3682.png" alt="my profile image" />
+        <img src={aboutMeImage} alt="my profile image" />
         {/* </AnimatePresence> */}
       </div>
       <div className="col-span-2">
