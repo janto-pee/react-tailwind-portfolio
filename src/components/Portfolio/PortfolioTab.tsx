@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import PortfolioData from "./portfolioData";
+import PortfolioCard from "./PortfolioCard";
 
 const PortfolioTab = () => {
   return (
@@ -24,17 +25,7 @@ const PortfolioTab = () => {
               const { id, type, image, delayAnimation, modalDetails } = item;
               return (
                 <Link to={type} key={id}>
-                  <div
-                    className="group relative"
-                    data-aos="fade-right"
-                    data-aos-delay={delayAnimation}
-                  >
-                    <img src={image} alt={type} className="" />
-
-                    <span className="hidden absolute w-full h-full top-0 left-0 bg-primary-800 text-white z-10 items-center justify-center group-hover:flex">
-                      {type}
-                    </span>
-                  </div>
+                  <PortfolioCard image={image} type={type} />
                 </Link>
               );
             })}
@@ -47,18 +38,7 @@ const PortfolioTab = () => {
                 const { id, type, image, delayAnimation } = item;
                 return (
                   <Link to={type} key={id}>
-                    <div
-                      key={id}
-                      className="group relative"
-                      data-aos="fade-right"
-                      data-aos-delay={delayAnimation}
-                    >
-                      <img src={image} alt={type} className="" />
-
-                      <span className="hidden absolute w-full h-full top-0 left-0 bg-primary-800 text-white z-10 items-center justify-center group-hover:flex">
-                        {type}
-                      </span>
-                    </div>
+                    <PortfolioCard image={image} type={type} />
                   </Link>
                 );
               }
@@ -72,18 +52,7 @@ const PortfolioTab = () => {
                 const { id, type, image, delayAnimation } = item;
                 return (
                   <Link to={type} key={id}>
-                    <div
-                      key={id}
-                      className="group relative"
-                      data-aos="fade-right"
-                      data-aos-delay={delayAnimation}
-                    >
-                      <img src={image} alt={type} className="" />
-
-                      <span className="hidden absolute w-full h-full top-0 left-0 bg-primary-800 text-white z-10 items-center justify-center group-hover:flex">
-                        {type}
-                      </span>
-                    </div>
+                    <PortfolioCard image={image} type={type} />
                   </Link>
                 );
               }
@@ -97,13 +66,7 @@ const PortfolioTab = () => {
                 const { id, type, image, delayAnimation } = item;
                 return (
                   <Link to={type} key={id}>
-                    <div key={id} className="group relative">
-                      <img src={image} alt={type} className="" />
-
-                      <span className="hidden absolute w-full h-full top-0 left-0 bg-primary-800 text-white z-10 items-center justify-center group-hover:flex">
-                        {type}
-                      </span>
-                    </div>
+                    <PortfolioCard image={image} type={type} />
                   </Link>
                 );
               }
@@ -117,13 +80,7 @@ const PortfolioTab = () => {
                 const { id, type, image, delayAnimation } = item;
                 return (
                   <Link to={type} key={id}>
-                    <div key={id} className="group relative">
-                      <img src={image} alt={type} className="" />
-
-                      <span className="hidden absolute w-full h-full top-0 left-0 bg-primary-800 text-white z-10 items-center justify-center group-hover:flex">
-                        {type}
-                      </span>
-                    </div>
+                    <PortfolioCard image={image} type={type} />
                   </Link>
                 );
               }
@@ -138,13 +95,7 @@ const PortfolioTab = () => {
               const { id, type, image, delayAnimation } = item;
               return (
                 <Link to={type} key={id}>
-                  <div key={id} className="group relative">
-                    <img src={image} alt={type} className="" />
-
-                    <span className="hidden absolute w-full h-full top-0 left-0 bg-primary-800 text-white z-10 items-center justify-center group-hover:flex">
-                      {type}
-                    </span>
-                  </div>
+                  <PortfolioCard image={image} type={type} />
                 </Link>
               );
             })}

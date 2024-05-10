@@ -1,10 +1,11 @@
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import AllRoute from "./router/allRoute";
-import Aos from "aos";
 
 function App() {
   useEffect(() => {
-    Aos.init({
+    AOS.init({
       duration: 1200,
     });
   }, []);

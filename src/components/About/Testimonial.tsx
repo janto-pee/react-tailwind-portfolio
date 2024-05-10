@@ -6,14 +6,12 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 py-10 lg:py-20 gap-8 ">
-      {/* animate={{ opacity: 1 }} */}
+    <div
+      className="grid grid-cols-1 md:grid-cols-2 py-10 lg:py-20 gap-8 "
+      data-aos="fade-up"
+    >
       {portfolioData.testimonial.map((item) => (
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          exit={{ opacity: 0 }}
+        <div
           key={item.item}
           className="col-span-1 p-8 bg-[rgb(22,22,22)] shadow-black"
         >
@@ -29,7 +27,7 @@ const Testimonials = () => {
           </div>
           <h2 className="text-xl mt-8 mb-3 text-primary-100">{item.title}</h2>
           <p className="text-primary-400">{item.comment}</p>
-        </motion.div>
+        </div>
       ))}
     </div>
   );

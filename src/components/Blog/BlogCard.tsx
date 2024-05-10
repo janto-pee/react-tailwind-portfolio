@@ -5,7 +5,10 @@ import { BlogTaxonomyInterface } from "../../utils/data";
 
 const BlogCard = ({ blogData }: { blogData: BlogTaxonomyInterface[] }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 lg:py-20 gap-8 ">
+    <div
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 lg:py-20 gap-8 "
+      data-aos="fade-up"
+    >
       {blogData.map((item) => (
         <Link to={item.image} key={item.item}>
           <div className="col-span-1 relative">

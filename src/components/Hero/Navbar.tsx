@@ -30,10 +30,13 @@ const Navbar = () => {
             </h3>
           </Link>
           <div className="flex gap-8 items-center lg:hidden ">
-            <FaDownload
+            <a
+              href="/src/assets/CV/front-end-developer.pdf"
               className="p-1 text-2xl rounded bg-secondary-300"
-              onClick={toggleNav}
-            />
+              download
+            >
+              <FaDownload />
+            </a>
             <MdOutlineMenu
               className="text-3xl text-primary-100"
               onClick={toggleNav}

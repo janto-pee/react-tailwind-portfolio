@@ -7,13 +7,9 @@ import Testimonials from "./Testimonial";
 
 const AboutComponent = () => {
   return (
-    <div className="bg-primary-900">
+    <div className="bg-primary-900 overflow-hidden">
       <Navbar />
-      <div
-        className="w-full max-w-6xl mx-auto px-5 lg:px-4"
-        data-aos="fade-up"
-        data-aos-duration="1200"
-      >
+      <div className="w-full max-w-6xl mx-auto px-5 lg:px-4" data-aos="fade-up">
         <div className="text-center mt-2 text-white dark:text-white">
           <span className="text-primary-300 ">Get to know me</span>
           <h2 className=" text-5xl text-primary-200 font-semibold dark:text-primary-900">
